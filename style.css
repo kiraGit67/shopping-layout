@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Quicksand;
+  font-size: 1.1em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+header {
+  background: linear-gradient(dodgerblue, transparent);
+  padding: 2.5em 5em;
+  color: white;
+  text-align: center;
+}
+
+main {
+  padding: 2.5em 5em;
+}
+
+article {
+  width: 30%;
+  display: inline-block;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+article + article {
+  margin-left: 1em;
+}
+
+article h2,
+article p,
+article .pricing-box {
+  margin-inline: 20px;
+}
+
+article p {
+  margin-bottom: 1em;
+  color: grey;
+}
+
+.image-box {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+}
+
+.photo-author {
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1.5em 1em;
+  background: linear-gradient(transparent, white);
+  color: black;
+}
+
+img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.pricing-box {
+  background-color: #eee;
+  padding: 1em;
+  border-radius: 15px;
+  position: relative;
+  bottom: 1em;
+  margin-top: 2.5em;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+button + button {
+  margin-top: 1em;
+}
+
+.price {
+  background-color: white;
+  color: grey;
+}
+
+.add2cart {
+  background-color: dodgerblue;
+  color: white;
+}
