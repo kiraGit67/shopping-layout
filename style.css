@@ -21,19 +21,27 @@ header {
 }
 
 main {
-  padding: 2.5em 5em;
+  padding: 0.5em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5em;
 }
 
 article {
-  width: 30%;
-  display: inline-block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-article + article {
-  margin-left: 1em;
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
 }
 
 article h2,
@@ -71,7 +79,7 @@ article p {
   width: 100%;
   margin: 0;
   padding: 1.5em 1em;
-  background: linear-gradient(transparent, white);
+  background: linear-gradient(transparent, white 80%);
   color: black;
 }
 
@@ -88,6 +96,28 @@ img {
   position: relative;
   bottom: 1em;
   margin-top: 2.5em;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.form-row {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+select {
+  width: 50%;
+  padding: 0.25rem;
+  border: none;
 }
 
 button {
