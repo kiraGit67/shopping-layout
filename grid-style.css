@@ -22,17 +22,17 @@ header {
 
 main {
   padding: 0.5em 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.5em;
 }
 
 article {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: space-between;
+  align-content: space-between;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
@@ -40,7 +40,13 @@ article {
 
 @media screen and (min-width: 768px) {
   main {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -99,23 +105,27 @@ img {
 }
 
 .input-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1.5rem;
   flex-wrap: wrap;
   padding: 1rem 0;
 }
 
 .form-row {
-  _width: 100%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 0.5rem;
 }
 
+.form-row:last-child {
+  grid-column: span 2;
+}
+
 select {
-  _width: 50%;
+  width: 100%;
   padding: 0.25rem;
   border: none;
   border-radius: 2px;
